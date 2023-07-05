@@ -1,0 +1,15 @@
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\UdemyAuthServer.Data.deps.json
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\UdemyAuthServer.Data.dll
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\UdemyAuthServer.Data.pdb
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\UdemyAuthServer.Core.dll
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\UdemyAuthServer.Core.pdb
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.csproj.AssemblyReference.cache
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.AssemblyInfoInputs.cache
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.AssemblyInfo.cs
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.csproj.CoreCompileInputs.cache
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.csproj.CopyComplete
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.dll
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\refint\UdemyAuthServer.Data.dll
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.pdb
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\ref\UdemyAuthServer.Data.dll

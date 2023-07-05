@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <!-- UdemyAuthServer.Core  -->
+  <ItemGroup>
+    <ProjectReference Include="..\UdemyAuthServer.Core\UdemyAuthServer.Core.csproj" />
+  </ItemGroup>
+
+</Project>
