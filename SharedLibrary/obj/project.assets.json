@@ -8,26 +8,24 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\m.saral\\.nuget\\packages\\": {}
+    "C:\\Users\\muhsi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\SharedLibrary\\SharedLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\SharedLibrary\\SharedLibrary.csproj",
       "projectName": "SharedLibrary",
-      "projectPath": "C:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\SharedLibrary\\SharedLibrary.csproj",
-      "packagesPath": "C:\\Users\\m.saral\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\SharedLibrary\\obj\\",
+      "projectPath": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\SharedLibrary\\SharedLibrary.csproj",
+      "packagesPath": "C:\\Users\\muhsi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\SharedLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\m.saral\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\muhsi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
