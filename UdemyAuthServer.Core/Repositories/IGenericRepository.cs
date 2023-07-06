@@ -4,11 +4,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace UdemyAuthServer.Core.Repositories.Abstract
+namespace UdemyAuthServer.Core.Repositories
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
-        Task<TEntity> GetByIdAsync(int id);
+        Task<TEntity?> GetByIdAsync(int id);
         
         Task<IEnumerable<TEntity>> GetAllAsync();
 
