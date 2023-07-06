@@ -22,3 +22,6 @@ C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\D
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net7.0\refint\UdemyAuthServer.Core.dll
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net7.0\UdemyAuthServer.Core.pdb
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net7.0\ref\UdemyAuthServer.Core.dll
+C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net7.0\SharedLibrary.dll
+C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net7.0\SharedLibrary.pdb
+C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net7.0\UdemyAuthServer.Core.csproj.CopyComplete
