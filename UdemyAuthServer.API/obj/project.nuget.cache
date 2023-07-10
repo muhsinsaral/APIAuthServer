@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "9E8RP0miUfpV9xiBHNrjlU1cuU/Bhm1SwGsNowAbqYSe3D/RbthZrchqQmkDCwTQ9CJMKbex5jlO7KL5W4p0RA==",
+  "dgSpecHash": "Yrcpd+OrdGHK/B2EOB8TONznUaMVzsJs1DWbkViZKoEVlUg8X8wk4mZsMl8vUy3ULXNCjrVYIsgSu/7JZrxkEw==",
   "success": true,
   "projectFilePath": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\UdemyAuthServer.API\\UdemyAuthServer.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\muhsi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\muhsi\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\muhsi\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\muhsi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.8\\microsoft.aspnetcore.authentication.jwtbearer.7.0.8.nupkg.sha512",
     "C:\\Users\\muhsi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.8\\microsoft.aspnetcore.cryptography.internal.7.0.8.nupkg.sha512",
     "C:\\Users\\muhsi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.8\\microsoft.aspnetcore.cryptography.keyderivation.7.0.8.nupkg.sha512",
     "C:\\Users\\muhsi\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.8\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.8.nupkg.sha512",
