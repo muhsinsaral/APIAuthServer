@@ -62,6 +62,25 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.15.1"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/7.0.8": {
         "type": "package",
         "compile": {
@@ -1129,6 +1148,9 @@
       "SharedLibrary/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.8"
+        },
         "compile": {
           "bin/placeholder/SharedLibrary.dll": {}
         },
@@ -1222,6 +1244,21 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.8": {
+      "sha512": "UWGvF86d2q90e1ync37Yg+yg2GRSeSh9y/Q5YRFw42YfzTDQd0X6somujDFVc9HWn6zVB7osSZnxHMW8BwoRSA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/7.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.7.0.8.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/7.0.8": {
@@ -3442,32 +3479,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\muhsi\\.nuget\\packages\\": {}
+    "C:\\Users\\m.saral\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\UdemyAuthServer.Service\\UdemyAuthServer.Service.csproj",
+      "projectUniqueName": "c:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\UdemyAuthServer.Service\\UdemyAuthServer.Service.csproj",
       "projectName": "UdemyAuthServer.Service",
-      "projectPath": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\UdemyAuthServer.Service\\UdemyAuthServer.Service.csproj",
-      "packagesPath": "C:\\Users\\muhsi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\UdemyAuthServer.Service\\obj\\",
+      "projectPath": "c:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\UdemyAuthServer.Service\\UdemyAuthServer.Service.csproj",
+      "packagesPath": "C:\\Users\\m.saral\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\UdemyAuthServer.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\muhsi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\m.saral\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\UdemyAuthServer.Data\\UdemyAuthServer.Data.csproj": {
-              "projectPath": "C:\\Users\\muhsi\\OneDrive\\Masaüstü\\C#\\UdemyAuthServer\\UdemyAuthServer.Data\\UdemyAuthServer.Data.csproj"
+            "c:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\UdemyAuthServer.Data\\UdemyAuthServer.Data.csproj": {
+              "projectPath": "c:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\UdemyAuthServer.Data\\UdemyAuthServer.Data.csproj"
             }
           }
         }
@@ -3503,7 +3542,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -32,3 +32,7 @@ C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\D
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.pdb
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.genruntimeconfig.cache
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\ref\UdemyAuthServer.Data.dll
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\UdemyAuthServer.Data.runtimeconfig.json
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\SharedLibrary.dll
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\bin\Debug\net7.0\SharedLibrary.pdb
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Data\obj\Debug\net7.0\UdemyAuthServer.Data.genruntimeconfig.cache

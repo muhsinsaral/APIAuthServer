@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SharedLibrary.Configurations;
+using SharedLibrary.Services;
 using UdemyAuthServer.Core.Configuration;
 using UdemyAuthServer.Core.Models;
 using UdemyAuthServer.Core.Repositories;
@@ -18,19 +19,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddScoped(typeof(IGenericRepository<>) , typeof(GenericRepository<>));
-builder.Services.AddScoped(typeof(IServiceGeneric<,>) , typeof(ServiceGeneric<,>));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(IServiceGeneric<,>), typeof(ServiceGeneric<,>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(
-        builder.Configuration.GetConnectionString("SqlServer"), 
+        builder.Configuration.GetConnectionString("SqlServer")
+        ,
         sqlOptions =>
         {
             sqlOptions.MigrationsAssembly("UdemyAuthServer.Data");
-        });
+        }
+        );
 });
 
 builder.Services.AddIdentity<UserApp, IdentityRole>(options =>
@@ -45,19 +47,22 @@ builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clien
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
 }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
 {
-    var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
-    options.TokenValidationParameters = new TokenValidationParameters
+    var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>() ?? throw new Exception("TokenOption can not be null");
+    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
     {
         ValidIssuer = tokenOptions.Issuer,
-        ValidAudience = tokenOptions.Audience,
+        ValidAudience = tokenOptions.Audience[0],
         IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
-        ValidateLifetime = true,
+
+        ValidateIssuerSigningKey = true,
         ValidateAudience = true,
         ValidateIssuer = true,
-        ClockSkew = TimeSpan.Zero
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero // => Hata payını sıfırladık // Bunu kullanmasaydık token ömür süresine 5 dk hata payı ekleyecekti.
     };
 });
 
@@ -78,9 +83,12 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();
 

@@ -25,3 +25,6 @@ C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\D
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net7.0\SharedLibrary.dll
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net7.0\SharedLibrary.pdb
 C:\Users\muhsi\OneDrive\Masaüstü\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net7.0\UdemyAuthServer.Core.csproj.CopyComplete
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net7.0\SharedLibrary.dll
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Core\bin\Debug\net7.0\SharedLibrary.pdb
+C:\Users\m.saral\Desktop\C#\UdemyAuthServer\UdemyAuthServer.Core\obj\Debug\net7.0\UdemyAuthServer.Core.csproj.CopyComplete

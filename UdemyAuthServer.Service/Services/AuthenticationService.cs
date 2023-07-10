@@ -129,7 +129,6 @@ namespace UdemyAuthServer.Service.Services
             //
             // RefreshToken'ı Null yapmak için kullanılır.
             //
-
             var existRefreshToken = await _userRefreshTokenService.Where(x => x.Code == refreshToken).SingleOrDefaultAsync();
             if (existRefreshToken == null) return Response<NoDataDto>.Fail("Refresh token not found", 404, true);
 
