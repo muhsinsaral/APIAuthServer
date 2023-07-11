@@ -9,7 +9,7 @@ namespace UdemyAuthServer.Core.Configuration
     {
         public required string Id { get; set; }
         public required string Secret { get; set; }
-        public required List<string> Audiences { get; set; }
+        public required List<string> Audiences { get; set; } = new List<string>();
 
     }
 }   

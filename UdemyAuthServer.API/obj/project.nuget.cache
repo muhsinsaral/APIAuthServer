@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "VFPOWB6gqnm0L93G6SFJv1B+DbwLqlCXjJLrxc/D4a+Pk+TCjrNZ5RR7mKrWbos4W6FW3QbnLlaua7N20KZd9w==",
+  "dgSpecHash": "Nr1kVSeol56BCx8gmqJlKd1oMyO4LoB24btnLZtCpSMxfqYXJ7DSoLKPfL3jWS38rLqi+Uy5oiYW1tSKi0EVfQ==",
   "success": true,
   "projectFilePath": "c:\\Users\\m.saral\\Desktop\\C#\\UdemyAuthServer\\UdemyAuthServer.API\\UdemyAuthServer.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m.saral\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\m.saral\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\m.saral\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\m.saral\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\m.saral\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\m.saral\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\m.saral\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\m.saral\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\m.saral\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

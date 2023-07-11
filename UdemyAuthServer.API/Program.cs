@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,13 @@ using UdemyAuthServer.Core.UnitOfWork;
 using UdemyAuthServer.Data;
 using UdemyAuthServer.Data.Repositories;
 using UdemyAuthServer.Service.Services;
+using System.Reflection;
+using FluentValidation;
+using System;
+using UdemyAuthServer.API.Validations;
+using UdemyAuthServer.Core.DTOs;
+using SharedLibrary.Extensions;
+using SharedLibrary.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +30,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped(typeof(IServiceGeneric<,>), typeof(ServiceGeneric<,>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -43,6 +52,7 @@ builder.Services.AddIdentity<UserApp, IdentityRole>(options =>
 //DI Register
 builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
 builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
+
 
 builder.Services.AddAuthentication(options =>
 {
@@ -66,12 +76,23 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
-
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//*******************************************
+//*************Exception*********************
+builder.Services.AddFluentValidation(conf =>
+{
+    conf.RegisterValidatorsFromAssembly(typeof(Program).Assembly);
+    conf.AutomaticValidationEnabled = true;
+    conf.DisableDataAnnotationsValidation = true;
+});
+
+builder.Services.UseCustomValidationResponse();
+//*********************************************
 
 var app = builder.Build();
 
@@ -81,6 +102,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else {
+    app.UseCustomException();
+}
+
+app.UseCustomException();
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

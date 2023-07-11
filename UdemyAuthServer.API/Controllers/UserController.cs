@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UdemyAuthServer.Core.DTOs;
 using UdemyAuthServer.Core.Services.Abstract;
+using SharedLibrary.Exceptions;
 
 namespace UdemyAuthServer.API.Controllers
 {
@@ -28,6 +29,12 @@ namespace UdemyAuthServer.API.Controllers
         public async Task<IActionResult> GetUser()
         {
             return ActionResultInstance(await _userService.GetUserByNameAsync(HttpContext.User.Identity.Name));
+        }
+
+        [HttpPost("CreateUserRoles/{userName}")]
+        public async Task<IActionResult> CreateUserRoles(string userName)
+        {
+            return ActionResultInstance(await _userService.CreateUserRolesAsync(userName));
         }
 
 

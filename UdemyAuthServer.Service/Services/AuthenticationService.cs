@@ -58,7 +58,7 @@ namespace UdemyAuthServer.Service.Services
 
             if (!await _userManager.CheckPasswordAsync(user, loginDto.Password))
                 return Response<TokenDto>.Fail("Email or Password is wrong", 400, true);
-            var token = _tokenService.CreateToken(user);
+            var token = await _tokenService.CreateToken(user);
             var userRefreshToken = await _userRefreshTokenService.Where(x => x.UserId == user.Id).SingleOrDefaultAsync();
             if (userRefreshToken == null)
             {
@@ -93,7 +93,7 @@ namespace UdemyAuthServer.Service.Services
             // 5. Sonuç olarak 200 koduyla ClientTokenDto döndür.
             //
 
-            if (clientLoginDto == null) throw new ArgumentNullException(nameof(clientLoginDto));
+            //if (clientLoginDto == null) throw new ArgumentNullException(nameof(clientLoginDto));
 
             var client = _clients.SingleOrDefault(x => x.Id == clientLoginDto.ClientId && x.Secret == clientLoginDto.ClientSecret);
 
@@ -112,7 +112,7 @@ namespace UdemyAuthServer.Service.Services
             var user = await _userManager.FindByIdAsync(existRefreshToken.UserId);
             if (user == null) return Response<TokenDto>.Fail("UserId not found", 404, true);
 
-            var tokenDto = _tokenService.CreateToken(user);
+            var tokenDto = await _tokenService.CreateToken(user);
 
             existRefreshToken.Code = tokenDto.RefreshToken;
             existRefreshToken.Expiration = tokenDto.RefreshTokenExpiration;

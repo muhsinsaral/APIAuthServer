@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using MiniApp1.API.Requirements;
 using SharedLibrary.Configurations;
 using SharedLibrary.Extensions;
 using SharedLibrary.Services;
@@ -12,67 +14,19 @@ var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTok
 
 builder.Services.AddCustomTokenAuth(tokenOptions);
 
+builder.Services.AddSingleton<IAuthorizationHandler,BirthDayRequirementHandler>();
+builder.Services.AddAuthorization(opt =>
+{
+    opt.AddPolicy("BursaPolicy", policy =>
+    {
+        policy.RequireClaim("city", "bursa");
+    });
+    opt.AddPolicy("AgePolicy", policy =>
+    {
+        policy.Requirements.Add(new BirthDayRequirement(18));
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//builder.Services.AddIdentity<UserApp, IdentityRole>(options =>
-//{
-//    options.User.RequireUniqueEmail = true;
-//    options.Password.RequireNonAlphanumeric = false;
-//}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-////DI Register
-//builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
-//builder.Services.Configure<List<Client>>(builder.Configuration.GetSection("Clients"));
-
-//builder.Services.AddAuthentication(options =>
-//{
-//    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-//    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-
-//}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
-//{
-//    var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>() ?? throw new Exception("TokenOption can not be null");
-//    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
-//    {
-//        ValidIssuer = tokenOptions.Issuer,
-//        ValidAudience = tokenOptions.Audience[0],
-//        IssuerSigningKey = SignService.GetSymmetricSecurityKey(tokenOptions.SecurityKey),
-
-//        ValidateIssuerSigningKey = true,
-//        ValidateAudience = true,
-//        ValidateIssuer = true,
-//        ValidateLifetime = true,
-//        ClockSkew = TimeSpan.Zero // => Hata payýný sýfýrladýk // Bunu kullanmasaydýk token ömür süresine 5 dk hata payý ekleyecekti.
-//    };
-//});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 
 builder.Services.AddControllers();
@@ -91,8 +45,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
